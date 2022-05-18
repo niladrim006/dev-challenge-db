@@ -1,0 +1,64 @@
+/* This css file is included by being imported in index.js */
+
+body {
+  width: 100%;
+  background-color: #fff
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.content {
+  width: 80vw;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.head-line {
+  text-align: center;
+}
+
+#data-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 10px 10px 50px grey;
+}
+
+#data-table tbody tr td, #data-table thead tr th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#data-table tbody tr:nth-child(even){background-color: #fdfdfd;}
+#data-table tbody tr:nth-child(odd){background-color: #f0f2f8;}
+#data-table tbody tr:hover {background-color: #c7cddd;}
+
+#data-table thead tr th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #618376;
+  color: white;
+}
+
+#data-table tfoot tr td {
+  padding: 12px 40px;
+  background-color: #c1d8d0;
+  color: rgb(31, 29, 29);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+.description {
+  margin: 50px 20px;
+    line-height: 1.6;
+}
+
+.auther-details {
+  font-size: 1rem;
+  color: gray;
+}
+

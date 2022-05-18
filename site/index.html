@@ -1,0 +1,64 @@
+<html>
+
+<head>
+	<!--
+    This is the library that provides websocket streaming pub/sub
+    The dev serverver is serving the html and javascript, but it also provides updating fx data on /fx/prices.
+     -->
+	<script src="stomp.js"></script>
+	<script src="sparkline.js"></script>
+</head>
+
+<body>
+	<section class="content">
+		<h1 class="head-line">Live Currency value updates (Sorted Table)</h1>
+
+		<!-- Table start -->
+		<table id="data-table">
+			<thead >
+				<tr>
+					<th>Currency</th>
+					<th>Best Bid</th>
+					<th>Best Ask</th>
+					<th>Last Change Bid</th>
+					<th>Last Change Ask</th>
+					<th>Mid Price Trend</th>
+				</tr>
+			</thead>
+			<tbody id="table-body"></tbody>
+			<tfoot>
+				<tr>
+					<td colspan="6">
+						<address class="auther-details">Name: Niladri Mandal, Email: hi.im.niladri@gmail.com</address>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+		<!-- Table end -->
+
+		<div class="description">
+			<h3>Steps and Description</h3>
+			<ol>
+				<li>Created a <strong>CurrencyTable </strong> constuction function with Only one property as map Object <strong>(tableMapData)</strong>.</li>
+				<li>I have made use of a Map Object because insert, delete, updates/replacing of existing data would be efficient in terms of performance.</li>
+				<li>On constuction function's prototype added <strong>subscribeData, mapData, sortMap & displaySortedData </strong>which contains respective business logic.</li>
+				<li>A new key <code>midPrice</code> is added in the response object which stores the calculated mid price of the currency.</li>
+				<li><strong>mapData </strong> also performs insertion/updation of data along with it filtring the midPrice which are older than 30 sec </li>
+				<li>With the help of this <strong> timeStamp</strong>, values that were received before 30 seconds are then filtered.</li>
+				<li>The mid price array should look like <code> <strong>midPrice: [{timeStamp:timeStamp, midPrice:midPrice}, {timeStamp:timeStamp, midPrice:midPrice}....] </strong>.</code></li>
+				<li><strong>sortData</strong> sorts the tableMapData in accending order of <strong>lastChangeBid </strong></li>
+				<li><strong>displaySortedData</strong> gets the table body element (#table-body) from DOM and creates table row and column dynamically based on <strong>tableMapData</strong> </li>
+				<li>displaySortedData internally makes use of <strong>generateTableCell</strong> got generation cells and <strong>getSparklineGraph</strong> to create sparkline array to plote Spartline graph</li>
+				<li>The resultant currency Map Object is then rendered into a table with sparkline.</li>
+			</ol>
+		</div>
+
+	</section>
+
+	<!-- Code you write in index.js and anything it depends on will be bundled into bundle.js and
+     is included here -->
+	<script src="bundle.js"></script>
+
+</body>
+
+</html>

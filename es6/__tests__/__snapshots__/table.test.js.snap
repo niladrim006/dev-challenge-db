@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sorted Datatable functionality test should receive message, data assignment and class addition on table 1`] = `
+"
+      <div id=\\"currency-table_body\\"><tr class=\\"currency-table_row\\"><td class=\\"currency-table_cell\\">gbpeur</td><td class=\\"currency-table_cell align-right\\">1.234401281999198</td><td class=\\"currency-table_cell align-right\\">1.255268054923685</td><td class=\\"currency-table_cell align-right\\">0.02224912511866406</td><td class=\\"currency-table_cell align-right\\">-0.010712388852019084</td><td class=\\"currency-table_cell align-right\\"><span></span></td></tr></div>
+    "
+`;
+
+exports[`Sorted Datatable should receive message 1`] = `
+"
+      <div id=\\"currency-table_body\\"><tr class=\\"currency-table_row\\"><td class=\\"currency-table_cell\\">gbpeur</td><td class=\\"currency-table_cell align-right\\">1.234401281999198</td><td class=\\"currency-table_cell align-right\\">1.255268054923685</td><td class=\\"currency-table_cell align-right\\">0.02224912511866406</td><td class=\\"currency-table_cell align-right\\">-0.010712388852019084</td><td class=\\"currency-table_cell align-right\\"><span></span></td></tr></div>
+    "
+`;
+
+exports[`Sorted Datatable should receive message, calculate midPrice, sort resultant data and render table 1`] = `
+"
+      <div id=\\"currency-table-body\\"><tr class=\\"currency-table-row\\"><td class=\\"currency-table-cell\\">usdjpy</td><td class=\\"currency-table-cell align-right\\">106.7297012204255</td><td class=\\"currency-table-cell align-right\\">107.25199883791178</td><td class=\\"currency-table-cell align-right\\">-2.8769211401569663</td><td class=\\"currency-table-cell align-right\\">-4.862314256927661</td><td class=\\"currency-table-cell align-right\\"><span></span></td></tr></div>
+    "
+`;
+
+exports[`Sorted Datatable should receive message, data assignment and class addition on table 1`] = `
+"
+      <div id=\\"currency-table_body\\"><tr class=\\"currency-table_row\\"><td class=\\"currency-table_cell\\">gbpeur</td><td class=\\"currency-table_cell align-right\\">1.234401281999198</td><td class=\\"currency-table_cell align-right\\">1.255268054923685</td><td class=\\"currency-table_cell align-right\\">0.02224912511866406</td><td class=\\"currency-table_cell align-right\\">-0.010712388852019084</td><td class=\\"currency-table_cell align-right\\"><span></span></td></tr></div>
+    "
+`;
